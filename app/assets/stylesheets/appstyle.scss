@@ -1,0 +1,52 @@
+@import "bootstrap/scss/bootstrap";
+@import "flatpickr/dist/flatpickr";
+
+.sidebar {
+  background: #000000 !important;
+}
+
+.crud-table {
+  border-radius: 0px !important;
+}
+
+.table th, .table td {
+  padding: 0.3rem !important;
+}
+
+.breadcrumb {
+  padding: 0.5rem 1.0rem !important;
+}
+
+.breadcrumb-menu .btn-success {
+  color: white !important;
+  font-size: 1.0rem !important;
+}
+
+.breadcrumb-menu .btn-success:hover {
+  background-color: #4dbd74 !important;
+  color: #e4e5e6 !important;
+}
+
+.breadcrumb-menu .btn-success.disabled {
+  background-color: #73818f !important;
+}
+
+.card-body {
+  padding: 0.7rem !important;
+}
+
+.form-check {
+  padding-left: 1.75rem !important;
+}
+
+.search-panel {
+  .normal-section, .advanced-form-footer {
+    max-height: 35px;
+  }
+}
+
+@media (min-width: 992px) {
+  #search-button {
+    min-width: 80px;
+  }
+}

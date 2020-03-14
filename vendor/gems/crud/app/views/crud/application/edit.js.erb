@@ -1,0 +1,16 @@
+<% @skip_form_actions = true %>
+<% content_for(:modal_footer) do %>
+  <a class="btn btn-link btn-cancel" data-dismiss="modal"><%= t("crud.action.cancel") %></a>
+  <button class="btn btn-ok btn-primary"><%= t("crud.action.ok") %></button>
+<% end %>
+
+$(function() {
+  var modal = $("<%= escape_javascript render(partial: "form", layout: "modal") %>").appendTo(document.body).modal();
+  modal.on("hidden.bs.modal", function() { modal.remove(); });
+  modal.find(".btn-ok").on("click", function() {
+    var form = modal.find(".modal-body form").on("ajax:send", function() {
+      modal.modal("hide");
+    });
+    Rails.fire(form[0], "submit");
+  });
+});

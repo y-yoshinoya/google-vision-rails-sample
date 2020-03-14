@@ -1,0 +1,22 @@
+<div class="modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <% if content_for? :modal_header %>
+          <%= content_for :modal_header %>
+        <% else %>
+          <h5 class="modal-title"><%= @title %></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <% end %>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <%= yield %>
+      </div>
+      <% if content_for? :modal_footer %>
+        <div class="modal-footer">
+          <%= content_for :modal_footer %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

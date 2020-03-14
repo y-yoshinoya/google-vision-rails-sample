@@ -1,0 +1,8 @@
+<% if resources.is_a?(Kaminari::PageScopeMethods) %>
+  <div class="d-flex align-items-center row">
+    <div class="text-muted flex-fill col-sm ml-2">
+      <%= page_entries_info resources %>
+      <%= paginate resources, remote: @remote %>
+    </div>
+  </div>
+<% end %>

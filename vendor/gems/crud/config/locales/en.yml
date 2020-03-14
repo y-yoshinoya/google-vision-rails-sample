@@ -1,0 +1,58 @@
+en:
+  crud:
+    advanced_search_conditions: Advanced search conditions
+
+    action:
+      ok: OK
+      cancel: Cancel
+      back: Back
+      clear: Clear
+      new: New
+      edit: Edit
+      index: List
+      show: Show
+      create: Create
+      update: Update
+      destroy: Destroy
+      advanced_search: Advanced Search
+      redisplay: Redisplay
+
+    action_title:
+      new: "New %{name}"
+      edit: "Editing %{name}"
+      index: "Listing %{name}"
+      show: "Showing %{name}"
+      create: "Create %{name}"
+      update: "Update %{name}"
+      destroy: "Destroy %{name}"
+
+    operator:
+      equals: is
+      not_equals: is not
+      greater_or_equal: '>='
+      less_or_equal: '<='
+      contains: contains
+      not_contains: doesn't contain
+      between: between
+      any: any
+      none: none
+
+    message:
+      successfully_created: "%{name} was successfully created."
+      successfully_updated: "%{name} was successfully updated."
+      successfully_deleted: "%{name} was successfully deleted."
+      are_you_sure: "Are you sure?"
+      enter_search_term: "Enter search term..."
+      modal_picker_title: "Select %{name}"
+      invalid_transition: "Invalid transition detected."
+
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    error_notification:
+      default_message: "Please review the problems below:"
+    select2:
+      placeholder: "Select for %{name}"

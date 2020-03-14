@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    models:
+      comment: 情報
+    attributes:
+      comment:
+        id: ID
+        content: コメント
+        image: 画像

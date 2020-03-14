@@ -23,9 +23,6 @@ Style/BlockDelimiters:
   Exclude:
     - "spec/**/*"
 
-Style/BracesAroundHashParameters:
-  Enabled: false
-
 Style/CollectionMethods:
   PreferredMethods:
     detect: "detect"
@@ -132,3 +129,15 @@ Naming/PredicateName:
   NamePrefix:
     - "is_"
     - "have_"
+
+# For rubocop < 1.0.0
+Style/HashEachMethods:
+  Enabled: true
+
+# For rubocop < 1.0.0
+Style/HashTransformKeys:
+  Enabled: true
+
+# For rubocop < 1.0.0
+Style/HashTransformValues:
+  Enabled: true

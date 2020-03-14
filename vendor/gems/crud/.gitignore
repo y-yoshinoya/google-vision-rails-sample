@@ -1,0 +1,12 @@
+.bundle/
+*.log
+pkg/
+*.sqlite3
+*.sqlite3-journal
+tmp/
+.sass-cache
+Gemfile.lock
+yarn.lock
+node_modules/
+spec/dummy/public/packs/
+spec/dummy/storage

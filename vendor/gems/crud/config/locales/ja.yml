@@ -1,0 +1,82 @@
+ja:
+  crud:
+    advanced_search_conditions: 詳細検索条件
+
+    action:
+      ok: OK
+      cancel: キャンセル
+      back: 戻る
+      clear: クリア
+      new: 新規作成
+      edit: 編集
+      index: 一覧
+      show: 詳細
+      create: 作成
+      update: 更新
+      destroy: 削除
+      search: 検索
+      advanced_search: 詳細検索
+      redisplay: 他の条件で検索
+
+    action_title:
+      new: "%{name}新規作成"
+      edit: "%{name}編集"
+      index: "%{name}一覧"
+      show: "%{name}詳細"
+      create: "%{name}作成"
+      update: "%{name}更新"
+      destroy: "%{name}削除"
+
+    operator:
+      equals: 等しい
+      not_equals: 等しくない
+      greater_or_equal: 以上
+      less_or_equal: 以下
+      contains: 含む
+      not_contains: 含まない
+      between: 次の範囲内
+      any: すべて
+      none: なし
+
+    message:
+      successfully_created: "%{name}を作成しました"
+      successfully_updated: "%{name}を更新しました"
+      successfully_deleted: "%{name}を削除しました"
+      are_you_sure: "よろしいですか？"
+      enter_search_term: "検索キーワードを入力..."
+      modal_picker_title: "%{name}選択"
+      invalid_transition: "不正な遷移が行われました。最初からやり直してください。"
+
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後&raquo;"
+      previous: "&lsaquo; 前"
+      next: "次 &rsaquo;"
+      truncate: "..."
+  helpers:
+    submit:
+      create: 作成する
+      update: 更新する
+      destroy: 削除する
+
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "結果が見つかりません"
+          one: "1件の結果を表示しています"
+          other: "%{count}件の結果を表示しています"
+      more_pages:
+        display_entries: "%{total}件中 %{first} - %{last}件目 の結果を表示しています"
+
+  simple_form:
+    "yes": 'はい'
+    "no": 'いいえ'
+    required:
+      text: '必須'
+      mark: '*'
+    error_notification:
+      default_message: "入力内容に誤りがあります。赤字の個所を修正してください。"
+    select2:
+      placeholder: "%{name}を選択してください"
+    file_button: "%{name}を選択"

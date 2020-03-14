@@ -1,0 +1,51 @@
+<%= tag.div id: temp_id(:search), class: "search-panel mb-2" do %>
+  <%= render "search_form" %>
+<% end %>
+
+<%= javascript_tag do %>
+  $(function() {
+    var searchPanel = $("#<%= temp_id :search %>");
+    var data = [{name: "format", value: "form"}, {name: "form", value: "<%= temp_id(:search) %>"}];
+    var displayButton;
+
+    var updateForm = function(minimum) {
+      displayButton = searchPanel.find(".display-switch").addClass("disabled");
+      searchPanel.find("select.operator").each(function() {
+        var row = $(this).closest(".advanced-search-input");
+        
+        if (this.value) {
+          row.find(":checkbox.operator").prop("checked", true).trigger("change");
+          searchPanel.addClass("do-filter");
+        } else if (minimum) {
+          row.addClass("d-none");
+          displayButton.removeClass("disabled");
+        }
+      });
+    };
+
+    searchPanel.on("click", "#filter", function(e) {
+      e.stopPropagation();
+      searchPanel.toggleClass("do-filter");
+      displayButton.trigger("click");
+    }).on("change", "select.operator", function() {
+      var form = searchPanel.find("form.form-search");
+      var url = form.attr("action");
+      $.get(url, data.concat(form.serializeArray())).then(function() {
+        updateForm(!displayButton.hasClass("disabled"));
+      });
+    }).on("change", ":checkbox.operator", function() {
+      var row = $(this).closest(".advanced-search-input").find(".form-row").toggleClass("d-none");
+      if (!this.checked) row.find(":input").val("");
+    }).on("click", ".display-switch", function(event) {
+      searchPanel.find(".advanced-search-input").removeClass("d-none");
+      $(this).addClass("disabled");
+    }).on("click", ".btn-clear", function(event) {
+      event.preventDefault();
+      searchPanel.find(".search-query").prop("disabled", true);
+      searchPanel.find(".advanced-form fieldset :input").prop("disabled", true);
+      searchPanel.find("#search-button").click();
+    });
+
+    updateForm(true);
+  });
+<% end if columns_for_advanced_search.present? %>

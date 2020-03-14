@@ -1,0 +1,9 @@
+<dl>
+  <% columns.each do |column| %>
+    <dt><%= model.human_attribute_name(column) %></dt>
+    <dd><%= column_html(resource, column) %></dd>
+  <% end %>
+</dl>
+<%= tag.div class: "form-group d-flex justify-content-end" do %>
+  <%= link_to t("crud.action.back"), cancel_path, class: "btn btn-link btn-cancel" %>
+<% end %>
