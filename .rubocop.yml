@@ -1,0 +1,134 @@
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - node_modules/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - bin/*
+    - config/**/*
+    - config.ru
+  TargetRubyVersion: 2.6
+
+Lint/IneffectiveAccessModifier:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/BlockDelimiters:
+  AutoCorrect: false
+  Exclude:
+    - "spec/**/*"
+
+Style/BracesAroundHashParameters:
+  Enabled: false
+
+Style/CollectionMethods:
+  PreferredMethods:
+    detect: "detect"
+    find: "detect"
+    inject: "inject"
+    reduce: "inject"
+
+Style/PreferredHashMethods:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/EmptyElse:
+  EnforcedStyle: empty
+
+Style/FormatString:
+  EnforcedStyle: percent
+
+Style/GuardClause:
+  MinBodyLength: 5
+
+Style/HashSyntax:
+  Exclude:
+    - "**/*.rake"
+    - "Rakefile"
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/NumericLiterals:
+  MinDigits: 7
+
+Style/PerlBackrefs:
+  AutoCorrect: false
+
+Style/RedundantSelf:
+  Enabled: false
+
+Style/RedundantReturn:
+  AllowMultipleReturnValues: true
+
+Style/Semicolon:
+  Exclude:
+    - "spec/**/*"
+
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/MixinUsage:
+  Exclude:
+    - db/seeds.rb
+
+Layout/SpaceBeforeFirstArg:
+  Enabled: false
+
+Lint/UnderscorePrefixedVariableName:
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 32
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Layout/LineLength:
+  Max: 160
+  Exclude:
+    - "db/migrate/*.rb"
+
+Layout/SpaceInsideBlockBraces:
+  SpaceBeforeBlockParameters: false
+
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - "db/migrate/*.rb"
+
+Metrics/PerceivedComplexity:
+  Max: 8
+
+Naming/PredicateName:
+  NamePrefix:
+    - "is_"
+    - "have_"
