@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :comments
-  root 'comments#index'
+  resources :analyses
+  root 'analyses#index'
 end

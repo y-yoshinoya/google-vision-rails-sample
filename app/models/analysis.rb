@@ -1,6 +1,6 @@
 require "google/cloud/vision"
 
-class Comment < ApplicationRecord
+class Analysis < ApplicationRecord
   after_commit :set_annotations!, on: [:create, :update]
   has_one_attached :image
 

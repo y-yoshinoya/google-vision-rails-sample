@@ -1,8 +1,8 @@
-class CreateComments < ActiveRecord::Migration[6.0]
+class CreateAnalyses < ActiveRecord::Migration[6.0]
   def change
-    create_table :comments do |t|
+    create_table :analyses do |t|
       t.references :before_image
-      t.text :content
+      t.text :comment
       t.text :description
       t.text :annotation_json
 

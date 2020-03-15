@@ -1,14 +1,14 @@
-module CommentsHelper
-  def comments_id_html(resource, value)
+module AnalysesHelper
+  def analyses_id_html(resource, value)
     link_to(value, resource)
   end
 
-  def comments_image_html(resource, value)
+  def analyses_image_html(resource, value)
     url = url_for(value)
     link_to(image_tag(url, width: "500"), resource)
   end
 
-  def comments_analyzed_image_html(resource, _value)
+  def analyses_analyzed_image_html(resource, _value)
     url = url_for(resource.image)
     tag.div do
       concat canvas(resource)
@@ -32,7 +32,7 @@ module CommentsHelper
     safe_join([script])
   end
 
-  def comments_annotation_json_html(_resource, value)
+  def analyses_annotation_json_html(_resource, value)
     return unless value
 
     tag.pre(JSON.pretty_generate(JSON.parse(value)), style: "height: 300px; background-color: #EEEEEE")

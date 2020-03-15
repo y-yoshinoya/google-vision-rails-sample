@@ -1,14 +1,14 @@
-class CommentsController < CrudController
+class AnalysesController < CrudController
   default_sort_key :id
   default_sort_order :desc
-  permit_keys :content, :image
+  permit_keys :comment, :image
 
   def columns_for_index
     [:id] + super
   end
 
   def columns_for_show
-    [:id, :content, :image, :analyzed_image, :description, :annotation_json]
+    [:id, :comment, :image, :analyzed_image, :description, :annotation_json]
   end
 
   def columns_for_search
