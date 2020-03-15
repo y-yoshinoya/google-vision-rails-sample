@@ -3,6 +3,12 @@ class AnalysesController < CrudController
   default_sort_order :desc
   permit_keys :comment, :image
 
+  protected
+
+  def do_filter
+    super.with_attached_image
+  end
+
   def columns_for_index
     [:id] + super
   end
