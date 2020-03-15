@@ -10,6 +10,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
     "bootstrap": "^4.4.1",
+    "bootstrap-filestyle2": "^2.1.0",
     "crud": "file:./vendor/gems/crud/webpacker/",
     "flatpickr": "^4.6.3",
     "jquery": "^3.4.1",

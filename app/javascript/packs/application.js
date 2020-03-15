@@ -13,9 +13,13 @@ import 'bootstrap'
 import 'crud'
 import 'crud/fontawesome'
 import 'crud/coreui'
+import 'bootstrap-filestyle2'
 import 'flatpickr'
 import { Japanese } from "flatpickr/dist/l10n/ja.js"
 flatpickr.localize(Japanese)
+import GoogleCloudVisionUtils from './google_cloud_vision'
+
+window.GoogleCloudVisionUtils = GoogleCloudVisionUtils;
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)

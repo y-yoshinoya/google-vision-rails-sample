@@ -3,7 +3,7 @@ module Crud
     class BootstrapFilestyleInput < SimpleForm::Inputs::FileInput
       def filestyle_options
         filestyle_options = options[:filestyle_options] || {}
-        filestyle_options[:buttonText] ||= I18n.t("simple_form.file_button", name: label_text)
+        filestyle_options[:text] ||= I18n.t("simple_form.file_button", name: label_text)
         filestyle_options
       end
 

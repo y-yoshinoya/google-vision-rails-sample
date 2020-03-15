@@ -7,3 +7,6 @@ ja:
         id: ID
         content: コメント
         image: 画像
+        description: テキスト抽出結果(Google Cloud Vision API)
+        analyzed_image: 解析結果画像(Google Cloud Vision API)
+        annotation_json: 解析結果(Google Cloud Vision API)
