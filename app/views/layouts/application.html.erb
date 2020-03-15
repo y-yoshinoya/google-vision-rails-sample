@@ -12,6 +12,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <main class="main">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-menu">
+          <%= yield :breadcrumb_menu %>
+        </li>
+      </ol>
+      <div class="container-fluid">
+        <%= bootstrap_flash_messages %>
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>

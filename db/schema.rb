@@ -34,9 +34,13 @@ ActiveRecord::Schema.define(version: 2020_03_14_041252) do
   end
 
   create_table "comments", force: :cascade do |t|
+    t.integer "before_image_id"
     t.text "content"
+    t.text "description"
+    t.text "annotation_json"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["before_image_id"], name: "index_comments_on_before_image_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

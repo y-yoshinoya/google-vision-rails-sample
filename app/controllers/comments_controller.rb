@@ -5,5 +5,9 @@ class CommentsController < CrudController
     [:id] + super
   end
 
+  def columns_for_show
+    [:id, :content, :description, :annotation_json, :image]
+  end
+
   def columns_for_advanced_search; end
 end
