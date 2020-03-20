@@ -3,7 +3,7 @@ PATH
   specs:
     crud (0.5.0.beta)
       crud_api
-      simple_form (~> 4.0.1)
+      simple_form (~> 5.0.2)
       webpacker (>= 4.0.0)
     crud_api (0.5.0.beta)
       active_model_serializers (~> 0.10.7)
@@ -317,7 +317,7 @@ GEM
       faraday (>= 0.17.3, < 2.0)
       jwt (>= 1.5, < 3.0)
       multi_json (~> 1.10)
-    simple_form (4.0.1)
+    simple_form (5.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
     spring (2.1.0)
