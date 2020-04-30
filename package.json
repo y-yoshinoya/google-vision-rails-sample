@@ -13,7 +13,7 @@
     "bootstrap-filestyle2": "^2.1.0",
     "crud": "file:./vendor/gems/crud/webpacker/",
     "flatpickr": "^4.6.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "perfect-scrollbar": "^1.4.0",
     "popper.js": "^1.16.0",
     "resolve-url-loader": "^3.1.1",
